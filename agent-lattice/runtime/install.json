@@ -1,0 +1,11 @@
+{
+  "schema": "al-install-v1",
+  "skills": [
+    {
+      "name": "al-impersonate",
+      "source": "skills/impersonate.md",
+      "description": "Impersonate a role from a definition file. Use when user says 'impersonate {path}' or 'be {role}'.",
+      "argument-hint": "{path-to-role-file}"
+    }
+  ]
+}

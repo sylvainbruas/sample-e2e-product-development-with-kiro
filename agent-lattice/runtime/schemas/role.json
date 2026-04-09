@@ -1,0 +1,9 @@
+{
+  "description": "Role definition file",
+  "h1_required": true,
+  "required_sections": [
+    {"heading": "Expertise", "min_items": 2},
+    {"heading": "Principles", "min_items": 2, "no_generic": true},
+    {"heading": "Skeptical of", "min_items": 2, "no_generic": true}
+  ]
+}

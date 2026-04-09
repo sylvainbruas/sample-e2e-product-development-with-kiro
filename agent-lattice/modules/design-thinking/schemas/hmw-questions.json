@@ -1,0 +1,12 @@
+{
+  "description": "How Might We questions list",
+  "h1_required": true,
+  "min_content_length": 150,
+  "content_patterns": [
+    {
+      "pattern": "How [Mm]ight [Ww]e",
+      "min_matches": 3,
+      "description": "HMW questions"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "kiro",
+  "description": "Kiro integration — spec generation and creation from ideation output",
+  "type": "service",
+  "prefix": "kiro"
+}

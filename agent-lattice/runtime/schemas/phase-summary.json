@@ -1,0 +1,16 @@
+{
+  "description": "End-of-phase summary document",
+  "h1_required": false,
+  "min_content_length": 200,
+  "required_sections": [
+    {
+      "heading": "What Was Accomplished"
+    },
+    {
+      "heading": "Key Decisions"
+    },
+    {
+      "heading": "Files Created"
+    }
+  ]
+}

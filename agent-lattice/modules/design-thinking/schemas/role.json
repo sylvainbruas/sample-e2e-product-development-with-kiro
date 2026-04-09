@@ -1,0 +1,8 @@
+{
+  "description": "Synthetic user persona — lived experience with demographics, goals, frustrations",
+  "role_type": "persona",
+  "required_sections": ["Context", "Skeptical of"],
+  "required_context_fields": ["occupation", "goals", "frustrations", "quote"],
+  "check_generic": ["Skeptical of"],
+  "optional_sections": ["Expertise", "Principles", "Interview Insights", "Empathy Map", "Validated Insights", "User Flows", "Requirements"]
+}

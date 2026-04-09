@@ -1,0 +1,27 @@
+{
+  "description": "Empathy maps with Says/Thinks/Does/Feels quadrants",
+  "h1_required": true,
+  "min_content_length": 400,
+  "content_patterns": [
+    {
+      "pattern": "\\*\\*Says\\*\\*",
+      "min_matches": 1,
+      "description": "Says quadrant"
+    },
+    {
+      "pattern": "\\*\\*Thinks\\*\\*",
+      "min_matches": 1,
+      "description": "Thinks quadrant"
+    },
+    {
+      "pattern": "\\*\\*Does\\*\\*",
+      "min_matches": 1,
+      "description": "Does quadrant"
+    },
+    {
+      "pattern": "\\*\\*Feels\\*\\*",
+      "min_matches": 1,
+      "description": "Feels quadrant"
+    }
+  ]
+}

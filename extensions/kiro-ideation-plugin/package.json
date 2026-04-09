@@ -1,0 +1,153 @@
+{
+  "name": "kiro-ideation-plugin",
+  "displayName": "Kiro Ideation",
+  "publisher": "kiro-power-builder",
+  "description": "Visualize and navigate the design thinking process powered by the Agent Lattice design-thinking module",
+  "version": "0.2.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:.al/output/design-thinking/manifest.json"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "kiro-ideation",
+          "title": "Kiro Ideation",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "kiro-ideation": [
+        {
+          "id": "ideationPhases",
+          "name": "Phases"
+        },
+        {
+          "id": "ideationRoles",
+          "name": "Roles"
+        },
+        {
+          "id": "ideationSpecs",
+          "name": "Specs"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "ideation.openDashboard",
+        "title": "Open Ideation Dashboard",
+        "icon": "$(dashboard)"
+      },
+      {
+        "command": "ideation.runPhase",
+        "title": "Run Phase in Kiro Chat",
+        "icon": "$(play)"
+      },
+      {
+        "command": "ideation.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "ideation.sendToChat",
+        "title": "Ideation: Send to Kiro Chat"
+      },
+      {
+        "command": "ideation.sendYolo",
+        "title": "Ideation: Send YOLO to Chat"
+      },
+      {
+        "command": "ideation.generateSpecs",
+        "title": "Generate Specs",
+        "icon": "$(file-add)"
+      },
+      {
+        "command": "ideation.openSpecsDashboard",
+        "title": "Open Specs Dashboard",
+        "icon": "$(dashboard)"
+      },
+      {
+        "command": "ideation.previewSpec",
+        "title": "Preview Requirements",
+        "icon": "$(open-preview)"
+      },
+      {
+        "command": "ideation.openSpecRaw",
+        "title": "Open Requirements",
+        "icon": "$(go-to-file)"
+      },
+      {
+        "command": "ideation.chatWithRole",
+        "title": "Chat with Role",
+        "icon": "$(comment-discussion)"
+      },
+      {
+        "command": "ideation.openRolesDashboard",
+        "title": "Open Roles Dashboard",
+        "icon": "$(dashboard)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "ideation.openDashboard",
+          "when": "view == ideationPhases",
+          "group": "navigation"
+        },
+        {
+          "command": "ideation.openSpecsDashboard",
+          "when": "view == ideationSpecs",
+          "group": "navigation@0"
+        },
+        {
+          "command": "ideation.openRolesDashboard",
+          "when": "view == ideationRoles",
+          "group": "navigation@0"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "ideation.runPhase",
+          "when": "viewItem == phase",
+          "group": "inline"
+        },
+        {
+          "command": "ideation.previewSpec",
+          "when": "viewItem == spec",
+          "group": "inline@1"
+        },
+        {
+          "command": "ideation.openSpecRaw",
+          "when": "viewItem == spec",
+          "group": "inline@2"
+        },
+        {
+          "command": "ideation.chatWithRole",
+          "when": "viewItem == dynamicRole || viewItem == staticRole",
+          "group": "inline"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "openvsx-kiro": "file:../openvsx-kiro"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

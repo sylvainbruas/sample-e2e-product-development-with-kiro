@@ -1,0 +1,12 @@
+{
+  "description": "Interview transcript with interviewer/subject exchanges",
+  "h1_required": true,
+  "min_content_length": 500,
+  "content_patterns": [
+    {
+      "pattern": "\\*\\*Interviewer:\\*\\*",
+      "min_matches": 3,
+      "description": "interviewer questions"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Requirements document with FR-x.x traceability and per-persona attribution",
+  "h1_required": true,
+  "min_content_length": 500,
+  "required_sections": [
+    { "heading": "Functional Requirements" },
+    { "heading": "Non-Functional Requirements" }
+  ],
+  "content_patterns": [
+    {
+      "pattern": "FR-\\d+\\.\\d+",
+      "min_matches": 3,
+      "description": "FR-x.x requirement IDs"
+    },
+    {
+      "pattern": "\\*\\*Personas:\\*\\*",
+      "min_matches": 1,
+      "description": "per-requirement persona attribution"
+    }
+  ]
+}

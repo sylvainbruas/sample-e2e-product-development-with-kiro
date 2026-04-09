@@ -1,0 +1,85 @@
+{
+  "name": "design-thinking",
+  "description": "Five-phase design thinking process with role-play",
+  "type": "runnable",
+  "prefix": "dt",
+  "output": "design-thinking",
+  "schema": "manifest-schema.json",
+  "dependencies": ["kiro"],
+  "phases": [
+    {
+      "id": "empathize",
+      "order": 1,
+      "workflow": "workflows/empathize.md",
+      "prerequisites": [],
+      "output-dir": "01-empathize",
+      "inputs": []
+    },
+    {
+      "id": "define",
+      "order": 2,
+      "workflow": "workflows/define.md",
+      "prerequisites": ["empathize"],
+      "output-dir": "02-define",
+      "inputs": [
+        "01-empathize/context.md",
+        "01-empathize/personas.md",
+        "01-empathize/interview-*.md",
+        "01-empathize/empathy-maps.md"
+      ]
+    },
+    {
+      "id": "ideate",
+      "order": 3,
+      "workflow": "workflows/ideate.md",
+      "prerequisites": ["define"],
+      "output-dir": "03-ideate",
+      "inputs": [
+        "02-define/phase-summary.md",
+        "02-define/hmw-questions.md",
+        "01-empathize/context.md",
+        "01-empathize/personas.md"
+      ]
+    },
+    {
+      "id": "prototype",
+      "order": 4,
+      "workflow": "workflows/prototype.md",
+      "prerequisites": ["ideate"],
+      "output-dir": "04-prototype",
+      "inputs": [
+        "03-ideate/selected-concepts.md",
+        "03-ideate/phase-summary.md",
+        "01-empathize/context.md",
+        "01-empathize/personas.md"
+      ]
+    },
+    {
+      "id": "generate-specs",
+      "order": 5,
+      "workflow": "workflows/generate-specs.md",
+      "prerequisites": ["prototype"],
+      "output-dir": "",
+      "inputs": [
+        "04-prototype/requirements.md",
+        "04-prototype/user-flows.md",
+        "04-prototype/phase-summary.md",
+        "01-empathize/personas.md"
+      ]
+    },
+    {
+      "id": "test",
+      "order": 6,
+      "workflow": "workflows/test.md",
+      "prerequisites": ["prototype"],
+      "output-dir": "05-test",
+      "inputs": [
+        "04-prototype/phase-summary.md",
+        "04-prototype/requirements.md",
+        "04-prototype/user-flows.md",
+        "01-empathize/personas.md",
+        "01-empathize/context.md"
+      ]
+    }
+  ]
+}

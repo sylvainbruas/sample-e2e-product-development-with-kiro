@@ -1,0 +1,11 @@
+{
+  "description": "Insight synthesis document with per-persona attribution",
+  "h1_required": true,
+  "min_content_length": 300,
+  "entries": {
+    "heading_pattern": "^##\\s+Insight:\\s+(.+)$",
+    "min_entries": 1,
+    "required_bold_fields": ["statement", "evidence", "implication", "confidence", "personas"],
+    "multi_value_fields": {}
+  }
+}

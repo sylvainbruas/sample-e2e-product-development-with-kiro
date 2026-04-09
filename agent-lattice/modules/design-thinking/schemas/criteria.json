@@ -1,0 +1,16 @@
+{
+  "description": "Evaluation criteria with weights for idea scoring",
+  "format": "json",
+  "required_keys": ["criteria"],
+  "properties": {
+    "criteria": {
+      "type": "array",
+      "min_items": 3,
+      "item_required_keys": ["name", "weight"],
+      "item_properties": {
+        "name": { "type": "string" },
+        "weight": { "type": "number" }
+      }
+    }
+  }
+}

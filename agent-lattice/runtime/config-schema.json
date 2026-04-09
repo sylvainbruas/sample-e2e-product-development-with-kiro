@@ -1,0 +1,17 @@
+{
+  "title": "Agent Lattice Runtime Config",
+  "type": "object",
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "default": "",
+      "description": "Display name for the project. Shown in dashboard titles."
+    },
+    "showRoleInteractions": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show multi-role mode discussions in chat. When false, only the outcome is shown."
+    }
+  },
+  "additionalProperties": false
+}

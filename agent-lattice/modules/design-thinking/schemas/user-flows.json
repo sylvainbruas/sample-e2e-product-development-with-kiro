@@ -1,0 +1,12 @@
+{
+  "description": "User flow definitions with per-persona attribution",
+  "h1_required": true,
+  "min_content_length": 400,
+  "content_patterns": [
+    {
+      "pattern": "\\*\\*Personas:\\*\\*",
+      "min_matches": 1,
+      "description": "per-flow persona attribution"
+    }
+  ]
+}

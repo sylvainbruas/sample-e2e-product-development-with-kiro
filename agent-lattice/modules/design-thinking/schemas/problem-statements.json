@@ -1,0 +1,10 @@
+{
+  "description": "Problem statements with HMW questions",
+  "h1_required": true,
+  "min_content_length": 200,
+  "required_sections": [
+    {
+      "heading": "Problem Statements"
+    }
+  ]
+}

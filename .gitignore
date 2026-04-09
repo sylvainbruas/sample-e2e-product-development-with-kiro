@@ -1,0 +1,21 @@
+# Generated output
+out/
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+*.vsix
+*.zip
+
+# Python
+__pycache__/
+
+# OS files
+.DS_Store
+
+# Kiro
+/.kiro/
+
+# Agent Lattice installed
+/.al/

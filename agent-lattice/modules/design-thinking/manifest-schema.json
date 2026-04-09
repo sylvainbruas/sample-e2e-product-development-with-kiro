@@ -1,0 +1,158 @@
+{
+  "title": "Design Thinking Manifest",
+  "description": "Manifest schema for the Design Thinking module.",
+  "type": "object",
+  "required": ["schema", "module", "project", "phases"],
+  "properties": {
+    "schema": { "const": "agent-lattice-v1" },
+    "module": { "const": "design-thinking" },
+    "project": {
+      "type": "object",
+      "required": ["name", "created", "lastUpdated"],
+      "properties": {
+        "name": { "type": "string" },
+        "created": { "type": "string" },
+        "lastUpdated": { "type": "string" }
+      }
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "autoExemptSteps": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["test.test-planning-context"]
+        }
+      }
+    },
+    "phases": {
+      "type": "object",
+      "required": ["empathize", "define", "ideate", "prototype", "generate-specs", "test"],
+      "properties": {
+        "empathize": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string" },
+            "startedAt": { "type": "string" },
+            "completedAt": { "type": "string" },
+            "files": { "type": "array", "items": { "type": "string" } },
+            "prerequisites": { "type": "object" },
+            "steps": {
+              "type": "object",
+              "properties": {
+                "context-discovery": { "type": "object" },
+                "persona-generation": { "type": "object" },
+                "dynamic-role-creation": { "type": "object" },
+                "interviews": { "type": "object" },
+                "empathy-maps": { "type": "object" },
+                "phase-summary": { "type": "object" }
+              }
+            }
+          }
+        },
+        "define": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string" },
+            "startedAt": { "type": "string" },
+            "completedAt": { "type": "string" },
+            "files": { "type": "array", "items": { "type": "string" } },
+            "prerequisites": { "type": "object" },
+            "steps": {
+              "type": "object",
+              "properties": {
+                "affinity-mapping": { "type": "object" },
+                "insight-validation": { "type": "object" },
+                "problem-statements": { "type": "object" },
+                "hmw-questions": { "type": "object" },
+                "phase-summary": { "type": "object" }
+              }
+            }
+          }
+        },
+        "ideate": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string" },
+            "startedAt": { "type": "string" },
+            "completedAt": { "type": "string" },
+            "files": { "type": "array", "items": { "type": "string" } },
+            "prerequisites": { "type": "object" },
+            "steps": {
+              "type": "object",
+              "properties": {
+                "brainstorming-setup": { "type": "object" },
+                "divergent-brainstorming": { "type": "object" },
+                "concept-review": { "type": "object" },
+                "evaluation-criteria": { "type": "object" },
+                "evaluation-matrix": { "type": "object" },
+                "concept-selection": { "type": "object" },
+                "phase-summary": { "type": "object" }
+              }
+            }
+          }
+        },
+        "prototype": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string" },
+            "startedAt": { "type": "string" },
+            "completedAt": { "type": "string" },
+            "files": { "type": "array", "items": { "type": "string" } },
+            "prerequisites": { "type": "object" },
+            "steps": {
+              "type": "object",
+              "properties": {
+                "concept-scoping": { "type": "object" },
+                "user-flows": { "type": "object" },
+                "requirements": { "type": "object" },
+                "requirements-review": { "type": "object" },
+                "phase-summary": { "type": "object" }
+              }
+            }
+          }
+        },
+        "generate-specs": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string" },
+            "startedAt": { "type": "string" },
+            "completedAt": { "type": "string" },
+            "files": { "type": "array", "items": { "type": "string" } },
+            "prerequisites": { "type": "object" },
+            "steps": {
+              "type": "object",
+              "properties": {
+                "extract-feature-groups": { "type": "object" },
+                "spec-breakdown": { "type": "object" },
+                "summary": { "type": "object" }
+              }
+            }
+          }
+        },
+        "test": {
+          "type": "object",
+          "properties": {
+            "status": { "type": "string" },
+            "startedAt": { "type": "string" },
+            "completedAt": { "type": "string" },
+            "files": { "type": "array", "items": { "type": "string" } },
+            "prerequisites": { "type": "object" },
+            "steps": {
+              "type": "object",
+              "properties": {
+                "test-planning-context": { "type": "object" },
+                "test-plan": { "type": "object" },
+                "questionnaires": { "type": "object" },
+                "metrics-framework": { "type": "object" },
+                "evaluation-rubric": { "type": "object" },
+                "test-plan-review": { "type": "object" },
+                "phase-summary": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

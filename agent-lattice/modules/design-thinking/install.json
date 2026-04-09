@@ -1,0 +1,90 @@
+{
+  "schema": "al-install-v1",
+  "skills": [
+    {
+      "name": "al-dt-workflow-empathize",
+      "source": "workflows/empathize.md",
+      "description": "Design Thinking Phase 1: Context discovery, persona generation, synthetic user creation, and interviews. Start here.",
+      "argument-hint": "",
+      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+    },
+    {
+      "name": "al-dt-workflow-define",
+      "source": "workflows/define.md",
+      "description": "Design Thinking Phase 2: Affinity mapping, insight validation, problem statements, HMW questions.",
+      "argument-hint": "",
+      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+    },
+    {
+      "name": "al-dt-workflow-ideate",
+      "source": "workflows/ideate.md",
+      "description": "Design Thinking Phase 3: Brainstorming, concept review, evaluation, concept selection.",
+      "argument-hint": "",
+      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+    },
+    {
+      "name": "al-dt-workflow-prototype",
+      "source": "workflows/prototype.md",
+      "description": "Design Thinking Phase 4: Concept scoping, user flows, requirements, requirements review.",
+      "argument-hint": "",
+      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+    },
+    {
+      "name": "al-dt-workflow-test",
+      "source": "workflows/test.md",
+      "description": "Design Thinking Phase 5: Test plan, questionnaires, metrics framework, evaluation rubrics.",
+      "argument-hint": "",
+      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+    },
+    {
+      "name": "al-dt-skill-interview",
+      "source": "skills/interview.md",
+      "description": "Interview a synthetic user persona or the actual user to surface needs, frustrations, and behaviors.",
+      "argument-hint": "{persona-name}"
+    },
+    {
+      "name": "al-dt-workflow-generate-specs",
+      "source": "workflows/generate-specs.md",
+      "description": "Generate a spec plan from Design Thinking requirements and user flows.",
+      "argument-hint": "",
+      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+    },
+    {
+      "name": "al-dt-workflow-create-spec",
+      "source": "{module:kiro}/workflows/create-spec.md",
+      "description": "Create a single Kiro spec from the spec plan.",
+      "argument-hint": "{slug}",
+      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+    },
+    {
+      "name": "al-dt-role-designer",
+      "source": "roles/designer.md",
+      "description": "Role: Designer. Thinks in user experiences, flows, interactions, and information architecture.",
+      "argument-hint": ""
+    },
+    {
+      "name": "al-dt-role-engineer",
+      "source": "roles/engineer.md",
+      "description": "Role: Engineer. Thinks in systems, constraints, feasibility, and technical risk.",
+      "argument-hint": ""
+    },
+    {
+      "name": "al-dt-role-market-researcher",
+      "source": "roles/market-researcher.md",
+      "description": "Role: Market Researcher. Understands competitive landscape, market trends, positioning, and viability.",
+      "argument-hint": ""
+    },
+    {
+      "name": "al-dt-role-product-manager",
+      "source": "roles/product-manager.md",
+      "description": "Role: Product Manager. Owns the problem space, prioritizes ruthlessly, makes scope and business alignment calls.",
+      "argument-hint": ""
+    },
+    {
+      "name": "al-dt-role-ux-researcher",
+      "source": "roles/ux-researcher.md",
+      "description": "Role: UX Researcher. Understands users through research, validates assumptions against real behavior patterns.",
+      "argument-hint": ""
+    }
+  ]
+}

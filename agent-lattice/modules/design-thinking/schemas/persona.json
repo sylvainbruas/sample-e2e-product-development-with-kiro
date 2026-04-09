@@ -1,0 +1,15 @@
+{
+  "description": "Personas artifact file",
+  "entries": {
+    "heading_pattern": "^## Persona:\\s+(.+)$",
+    "min_entries": 1,
+    "required_bold_fields": ["age", "occupation", "location", "goals", "frustrations", "behaviors", "skeptical of", "quote"],
+    "optional_bold_fields": ["demographics", "devices", "environment"],
+    "multi_value_fields": {
+      "goals": 2,
+      "frustrations": 2,
+      "behaviors": 2,
+      "skeptical of": 2
+    }
+  }
+}

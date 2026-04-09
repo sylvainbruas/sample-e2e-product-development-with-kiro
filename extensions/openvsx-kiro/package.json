@@ -1,0 +1,16 @@
+{
+  "name": "openvsx-kiro",
+  "version": "0.1.0",
+  "description": "Shared library for Kiro OpenVSX extensions",
+  "main": "./out/index.js",
+  "types": "./out/index.d.ts",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
