@@ -42,6 +42,7 @@ def discover_modules(modules_dir):
 
         modules.append({
             "name": meta.get("name", name),
+            "type": meta.get("type", "runnable"),
             "description": meta.get("description", ""),
             "prefix": meta.get("prefix", ""),
             "output": meta.get("output", ""),

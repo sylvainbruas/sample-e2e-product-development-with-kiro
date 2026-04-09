@@ -1,11 +1,6 @@
----
-phase: create-spec
-order: 2
-prerequisites: []
-output-dir: ""
----
-
 # Create Spec
+
+> **Standalone workflow — no manifest.** This workflow belongs to the kiro service module. It does not use the manifest system. Do not call `al-manifest.py` (no init, status, update-step, or steps). State is tracked entirely through `al-kiro-specs.py` and filesystem detection.
 
 ## Purpose
 

@@ -54,7 +54,7 @@
       "source": "{module:kiro}/workflows/create-spec.md",
       "description": "Create a single Kiro spec from the spec plan.",
       "argument-hint": "{slug}",
-      "steering": ["al-workflows.md", "al-artifacts.md", "al-gates.md", "al-manifest.md"]
+      "steering": ["al-gates.md"]
     },
     {
       "name": "al-dt-role-designer",
