@@ -2,6 +2,14 @@
 
 This sample demonstrates how to run a complete product development lifecycle — from user research through implementation-ready specs — using AI-assisted workflows inside the Kiro IDE. It combines a document-driven workflow framework (**Agent Lattice**) with companion **IDE extensions** that visualize progress in real time.
 
+> This project is a sample that showcases the capabilities of [Kiro](https://kiro.dev) and the potential extensibility for custom use cases. It is not intended for production environments.
+
+## Screenshots
+
+| Ideation Dashboard | Roles & Interviews | Specs Dashboard |
+|---|---|---|
+| [![Ideation Dashboard](images/ideation.png)](images/ideation.png) | [![Roles & Interviews](images/roles.png)](images/roles.png) | [![Specs Dashboard](images/specs.png)](images/specs.png) |
+
 ## What's Inside
 
 | Directory | What it is |
