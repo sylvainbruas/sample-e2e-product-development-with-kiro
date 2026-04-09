@@ -6,9 +6,13 @@ This sample demonstrates how to run a complete product development lifecycle —
 
 ## Screenshots
 
-| Ideation Dashboard | Roles & Interviews | Specs Dashboard |
-|---|---|---|
-| [![Ideation Dashboard](images/ideation.png)](images/ideation.png) | [![Roles & Interviews](images/roles.png)](images/roles.png) | [![Specs Dashboard](images/specs.png)](images/specs.png) |
+<p align="center">
+  <a href="images/ideation.png"><img src="images/ideation.png" alt="Ideation Dashboard" width="800"></a>
+</p>
+
+| Roles & Interviews | Specs Dashboard |
+|---|---|
+| <a href="images/roles.png"><img src="images/roles.png" alt="Roles & Interviews" width="400"></a> | <a href="images/specs.png"><img src="images/specs.png" alt="Specs Dashboard" width="400"></a> |
 
 ## What's Inside
 
