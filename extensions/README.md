@@ -182,9 +182,9 @@ await chat.send('@configure', 'kiro-configurator');
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `displayName` | `string` | — | Prefix for warning/error messages |
-| `sessionDelay` | `number` | `500` | Delay (ms) between `newSession` and `sendMainUserInput` |
+| `sessionDelay` | `number` | `500` | Delay (ms) used only by the legacy fallback path |
 
-Under the hood, `send()` calls `kiroAgent.newSession` → waits `sessionDelay` → calls `kiroAgent.sendMainUserInput`. `sendRaw()` skips the session creation.
+Under the hood, both `send()` and `sendRaw()` call `kiroAgent.loadSessionWithPrompt(undefined, prompt)`, which opens a Kiro chat session with the prompt preloaded. If that command is unavailable (older Kiro builds), they fall back to `kiroAgent.newSession` → wait `sessionDelay` → `kiroAgent.sendMainUserInput`.
 
 ### JsonFileWatcher
 
