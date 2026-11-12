@@ -37,9 +37,9 @@ export class KiroChat {
       ? `Use the ${powerName} power to run ${message}`
       : message;
     try {
-      await vscode.commands.executeCommand('kiroAgent.newSession');
+      await vscode.commands.executeCommand('kiroAgent.startNewChatSession');
       await delay(this.sessionDelay);
-      await vscode.commands.executeCommand('kiroAgent.sendMainUserInput', prompt);
+      await vscode.commands.executeCommand('kiroAgent.sessions.sendPrompt', prompt);
     } catch (e: any) {
       vscode.window.showErrorMessage(`${this.displayName}: Failed to send to chat — ${e.message}`);
     }
@@ -50,7 +50,7 @@ export class KiroChat {
    */
   async sendRaw(message: string): Promise<void> {
     try {
-      await vscode.commands.executeCommand('kiroAgent.sendMainUserInput', message);
+      await vscode.commands.executeCommand('kiroAgent.sessions.sendPrompt', message);
     } catch (e: any) {
       vscode.window.showErrorMessage(`${this.displayName}: Failed to send — ${e.message}`);
     }
